@@ -146,6 +146,44 @@ POST http://localhost:5000/api/incidents
 
 ---
 
+## Sample incident data generator script from Database MongoDb dashboard .
+<img width="1915" height="974" alt="image" src="https://github.com/user-attachments/assets/065a2074-9e95-437d-a6c8-374d1d49e3eb" />
+
+{
+  "_id": {
+    "$oid": "6955b6b81f91d8545b0a54e5"
+  },
+  "available": true,
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      72.8777,
+      19.076
+    ]
+  },
+  "__v": 0,
+  "currentIncident": null
+}
+
+{
+  "_id": {
+    "$oid": "695630a9f280b9cf6beb03a4"
+  },
+  "available": false,
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      72.88,
+      19.07
+    ]
+  },
+  "__v": 0,
+  "currentIncident": {
+    "$oid": "6956aec3f91f63822f745f53"
+  }
+}
+
+
 ## 🎯 Use Case
 
 This project demonstrates a real-world emergency response workflow by combining:
