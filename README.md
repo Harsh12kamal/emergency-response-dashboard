@@ -191,6 +191,14 @@ This project demonstrates a real-world emergency response workflow by combining:
 * AI-powered decision support
 * Geospatial data processing
 * Real-time operational dashboards
+* 
+WEBSITE VIEW
+
+<img width="1918" height="1077" alt="image" src="https://github.com/user-attachments/assets/4fd3cf7c-e18a-4439-8199-466f325cbbcd" />
+
+<img width="1918" height="1079" alt="image" src="https://github.com/user-attachments/assets/1871b759-961a-46b1-a5b4-086f2a03164f" />
+
+
 
 ## 🙌 Author
 Harsh Kamal
