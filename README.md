@@ -146,43 +146,44 @@ POST http://localhost:5000/api/incidents
 
 ---
 
-## Sample incident data generator script from Database MongoDb dashboard .
-<img width="1915" height="974" alt="image" src="https://github.com/user-attachments/assets/065a2074-9e95-437d-a6c8-374d1d49e3eb" />
+## Sample incident data generator script.
 
-{
-  "_id": {
-    "$oid": "6955b6b81f91d8545b0a54e5"
-  },
-  "available": true,
-  "location": {
-    "type": "Point",
-    "coordinates": [
-      72.8777,
-      19.076
-    ]
-  },
-  "__v": 0,
-  "currentIncident": null
-}
+this code is inside app.jsx for incident generation
 
-{
-  "_id": {
-    "$oid": "695630a9f280b9cf6beb03a4"
-  },
-  "available": false,
-  "location": {
-    "type": "Point",
-    "coordinates": [
-      72.88,
-      19.07
-    ]
-  },
-  "__v": 0,
-  "currentIncident": {
-    "$oid": "6956aec3f91f63822f745f53"
-  }
-}
+```
+const INCIDENT_DESCRIPTIONS = [
+  "Fire reported in residential building",
+  "Road accident with multiple vehicles",
+  "Medical emergency – cardiac arrest",
+  "Gas leak detected",
+  "Flooding due to heavy rain",
+  "Building collapse reported",
+  "Electrical short circuit fire",
+  "Chemical spill incident",
+];
 
+const getRandomIncidentData = () => {
+  // Mumbai base coordinates
+  const BASE_LAT = 19.076;
+  const BASE_LNG = 72.8777;
+
+  // Random offset
+  const latOffset = (Math.random() - 0.5) * 0.04;
+  const lngOffset = (Math.random() - 0.5) * 0.04;
+
+  return {
+    description:
+      INCIDENT_DESCRIPTIONS[
+        Math.floor(Math.random() * INCIDENT_DESCRIPTIONS.length)
+      ],
+    latitude: BASE_LAT + latOffset,
+    longitude: BASE_LNG + lngOffset,
+    severity: ["low", "medium", "high"][
+      Math.floor(Math.random() * 3)
+    ],
+  };
+};
+```
 
 ## 🎯 Use Case
 
@@ -194,11 +195,9 @@ This project demonstrates a real-world emergency response workflow by combining:
 * 
 WEBSITE VIEW
 
-<img width="1918" height="1077" alt="image" src="https://github.com/user-attachments/assets/4fd3cf7c-e18a-4439-8199-466f325cbbcd" />
+<img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/6b83c10d-7ac1-452d-aebb-f1fe1f5dde8d" />
 
-<img width="1918" height="1079" alt="image" src="https://github.com/user-attachments/assets/1871b759-961a-46b1-a5b4-086f2a03164f" />
-
-
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/088a982a-4ca4-4e36-9783-9a3903934c86" />
 
 ## 🙌 Author
 Harsh Kamal
