@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import Incident from "../models/Incident.js";
 import Unit from "../models/Unit.js";
 
-// ✅ CREATE UNIT
+//CREATE UNIT
 export const createUnit = async (req, res) => {
   try {
     const { name, coordinates } = req.body;
@@ -22,7 +22,7 @@ export const createUnit = async (req, res) => {
   }
 };
 
-// ✅ RESOLVE INCIDENT & FREE UNIT
+//RESOLVE INCIDENT
 export const resolveIncident = async (req, res) => {
   try {
     const { incidentId } = req.params;
@@ -59,7 +59,7 @@ export const getAllUnits = async (req, res) => {
 };
 
 
-// ✅ DISPATCH NEAREST UNIT
+// DISPATCH UNIT
 export const dispatchNearestUnit = async (req, res) => {
   try {
     const { incidentId } = req.params;
