@@ -1,0 +1,6 @@
+# Environment variables
+.env
+emergency-backend/.env
+
+# Node
+node_modules/
